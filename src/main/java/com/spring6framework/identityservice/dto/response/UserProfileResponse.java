@@ -1,17 +1,21 @@
 package com.spring6framework.identityservice.dto.response;
 
-import java.util.Set;
+import java.time.LocalDate;
 
 import lombok.*;
 import lombok.experimental.FieldDefaults;
 
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class UserResponse {
+public class UserProfileResponse {
     String id;
-    String username;
-    Set<RoleResponse> roles;
+    String firstName;
+    String lastName;
+    LocalDate dob;
+    String phoneNumber;
+    String email;
+    String city;
 }

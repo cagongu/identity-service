@@ -6,4 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.spring6framework.identityservice.entities.Role;
 
 @Repository
-public interface RoleRepository extends JpaRepository<Role, String> {}
+public interface RoleRepository extends JpaRepository<Role, String> {
+    Role findRoleByName(String name);
+}

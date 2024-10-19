@@ -1,14 +1,11 @@
 package com.spring6framework.identityservice.configuration;
 
-import java.util.HashSet;
-
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import com.spring6framework.identityservice.entities.User;
-import com.spring6framework.identityservice.enums.Role;
 import com.spring6framework.identityservice.repository.UserRepository;
 
 import lombok.AccessLevel;
@@ -27,12 +24,9 @@ public class ApplicationConfig {
     ApplicationRunner applicationRunner(UserRepository userRepository) {
         return args -> {
             if (userRepository.findByUsername("admin").isEmpty()) {
-                var roles = new HashSet<String>();
-                roles.add(Role.ADMIN.name());
                 User user = User.builder()
                         .username("admin")
                         .password(passwordEncoder.encode("admin"))
-                        //                        .roles(roles)
                         .build();
                 userRepository.save(user);
                 log.warn("admin user has been created with default password: admin, please change it");

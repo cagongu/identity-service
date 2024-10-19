@@ -1,10 +1,7 @@
 package com.spring6framework.identityservice.dto.request;
 
 import java.time.LocalDate;
-
-import jakarta.validation.constraints.Size;
-
-import com.spring6framework.identityservice.validator.DobConstraint;
+import java.util.UUID;
 
 import lombok.*;
 import lombok.experimental.FieldDefaults;
@@ -14,19 +11,11 @@ import lombok.experimental.FieldDefaults;
 @AllArgsConstructor
 @Builder
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class UserCreationRequest {
-    @Size(min = 4, message = "USERNAME_INVALID")
-    String username;
-
-    @Size(min = 6, message = "INVALID_PASSWORD")
-    String password;
-
+public class ProfileCreationRequest {
+    UUID userId;
     String firstName;
     String lastName;
-
-    @DobConstraint(min = 10, message = "INVALID_DOB")
     LocalDate dob;
-
     String phoneNumber;
     String email;
     String city;
