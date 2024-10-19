@@ -7,9 +7,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-import com.spring6framework.identityservice.repository.UserRepository;
 import com.spring6framework.identityservice.entities.User;
 import com.spring6framework.identityservice.enums.Role;
+import com.spring6framework.identityservice.repository.UserRepository;
 
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;

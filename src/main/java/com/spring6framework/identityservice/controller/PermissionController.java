@@ -4,10 +4,10 @@ import java.util.List;
 
 import org.springframework.web.bind.annotation.*;
 
-import com.spring6framework.identityservice.service.PermissionService;
-import com.spring6framework.identityservice.dto.response.ApiResponse;
 import com.spring6framework.identityservice.dto.request.PermissionRequest;
+import com.spring6framework.identityservice.dto.response.ApiResponse;
 import com.spring6framework.identityservice.dto.response.PermissionResponse;
+import com.spring6framework.identityservice.service.PermissionService;
 
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;

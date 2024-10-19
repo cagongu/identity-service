@@ -4,11 +4,11 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.spring6framework.identityservice.repository.PermissionRepository;
 import com.spring6framework.identityservice.dto.request.PermissionRequest;
 import com.spring6framework.identityservice.dto.response.PermissionResponse;
 import com.spring6framework.identityservice.entities.Permission;
 import com.spring6framework.identityservice.mapper.PermissionMapper;
+import com.spring6framework.identityservice.repository.PermissionRepository;
 
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;

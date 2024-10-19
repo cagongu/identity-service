@@ -8,11 +8,11 @@ import jakarta.validation.Valid;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
-import com.spring6framework.identityservice.service.UserService;
-import com.spring6framework.identityservice.dto.response.ApiResponse;
 import com.spring6framework.identityservice.dto.request.UserCreationRequest;
 import com.spring6framework.identityservice.dto.request.UserUpdateRequest;
+import com.spring6framework.identityservice.dto.response.ApiResponse;
 import com.spring6framework.identityservice.dto.response.UserResponse;
+import com.spring6framework.identityservice.service.UserService;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

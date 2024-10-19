@@ -14,8 +14,8 @@ import org.springframework.security.oauth2.jwt.NimbusJwtDecoder;
 import org.springframework.stereotype.Component;
 
 import com.nimbusds.jose.JOSEException;
-import com.spring6framework.identityservice.service.AuthenticationService;
 import com.spring6framework.identityservice.dto.request.IntrospectRequest;
+import com.spring6framework.identityservice.service.AuthenticationService;
 
 @Component
 public class CustomJwtDecoder implements JwtDecoder {

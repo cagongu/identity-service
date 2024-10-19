@@ -18,8 +18,6 @@ import com.nimbusds.jose.crypto.MACSigner;
 import com.nimbusds.jose.crypto.MACVerifier;
 import com.nimbusds.jwt.JWTClaimsSet;
 import com.nimbusds.jwt.SignedJWT;
-import com.spring6framework.identityservice.repository.InvalidatedTokenRepository;
-import com.spring6framework.identityservice.repository.UserRepository;
 import com.spring6framework.identityservice.dto.request.AuthenticationRequest;
 import com.spring6framework.identityservice.dto.request.IntrospectRequest;
 import com.spring6framework.identityservice.dto.request.LogoutRequest;
@@ -30,6 +28,8 @@ import com.spring6framework.identityservice.entities.InvalidatedToken;
 import com.spring6framework.identityservice.entities.User;
 import com.spring6framework.identityservice.exception.AppException;
 import com.spring6framework.identityservice.exception.ErrorCode;
+import com.spring6framework.identityservice.repository.InvalidatedTokenRepository;
+import com.spring6framework.identityservice.repository.UserRepository;
 
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;

@@ -1,5 +1,14 @@
 package com.spring6framework.identityservice.service;
 
+import java.util.HashSet;
+import java.util.List;
+import java.util.UUID;
+
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
+
 import com.spring6framework.identityservice.dto.request.UserCreationRequest;
 import com.spring6framework.identityservice.dto.request.UserUpdateRequest;
 import com.spring6framework.identityservice.dto.response.UserResponse;
@@ -10,18 +19,11 @@ import com.spring6framework.identityservice.exception.ErrorCode;
 import com.spring6framework.identityservice.mapper.UserMapper;
 import com.spring6framework.identityservice.repository.RoleRepository;
 import com.spring6framework.identityservice.repository.UserRepository;
+
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.stereotype.Service;
-import org.springframework.util.StringUtils;
-
-import java.util.HashSet;
-import java.util.List;
-import java.util.UUID;
 
 @Service
 @RequiredArgsConstructor
