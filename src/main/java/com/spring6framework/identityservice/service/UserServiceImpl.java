@@ -56,7 +56,6 @@ public class UserServiceImpl implements UserService {
 
         user = userRepository.save(user);
 
-
         var profileRequest = profileMapper.userCreationRequesttoProfileCreationRequest(request);
         profileRequest.setUserId(user.getId());
 
