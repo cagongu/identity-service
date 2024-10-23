@@ -24,7 +24,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class SecurityConfig {
     private static final String[] PUBLIC_ENDPOINTS = {
-        "/users", "/auth/token", "/auth/introspect", "/auth/logout", "/auth/refresh"
+         "/auth/token", "/auth/introspect", "/auth/logout", "/auth/refresh", "/users/registration"
     };
 
     private CustomJwtDecoder customJwtDecoder;
@@ -33,8 +33,8 @@ public class SecurityConfig {
     public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
         httpSecurity.authorizeHttpRequests(request -> request.requestMatchers(HttpMethod.POST, PUBLIC_ENDPOINTS)
                 .permitAll()
-                .requestMatchers(HttpMethod.GET, "/users")
-                .hasRole(Role.ADMIN.name())
+//                .requestMatchers(HttpMethod.GET, "/users")
+//                .hasRole(Role.ADMIN.name())
                 .anyRequest()
                 .authenticated());
 

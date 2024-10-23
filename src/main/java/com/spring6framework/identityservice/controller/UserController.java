@@ -25,7 +25,7 @@ public class UserController {
     private static final String USER_PATH = "/users";
     private static final String USER_PATH_ID = USER_PATH + "/{userId}";
 
-    @PostMapping(USER_PATH)
+    @PostMapping(USER_PATH + "/registration")
     ApiResponse<UserResponse> createUser(@RequestBody @Valid UserCreationRequest request) {
         return ApiResponse.<UserResponse>builder()
                 .result(userService.createUser(request))
